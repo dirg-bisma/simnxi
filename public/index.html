@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Belajar Angular JS</title>
+
+    <!-- Bootstrap -->
+    <link href="./bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="./bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./bower_components/angular/angular.min.js"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="form-group">
+                <label>Nama</label>
+                <input type="text" class="form-control" placeholder="Masukkan Nama Anda" ng-model="nama"/>
+            </div>
+        </div>
+    </div>
+
+    <h2>Hello {{nama}}</h2>
+    <br>
+    <h3>tambah :{{ 5 + 1 }}</h3>
+    <br>
+    <div ng-app="" ng-init="person=['a','b']">
+
+        <p>Total in dollar: {{ person[3] }}</p>
+
+    </div>
+    <br>
+    <div ng-app="myAppxx" ng-controller="myCtrlyy">
+        {{ firstName + " " + lastName }}
+    </div>
+
+
+</div>
+
+<script>
+    var app = angular.module("myAppxx", []);
+    app.controller("myCtrlyy", function($scope) {
+        $scope.firstName = "John";
+        $scope.lastName= "Doe";
+    });
+</script>
+
+
+
+
+</body>
+</html>
